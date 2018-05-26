@@ -18,7 +18,7 @@ class Module
 	           send(a) ? true : false
 	         end
 	       end
-     else
+     else 
     	   if block
 		       define_method(name) do
 		         if instance_variables.include?("@#{name}")
@@ -27,8 +27,8 @@ class Module
 		           instance_eval(&block)
 		         end
 		       end
-	       end	       
-     	 
+	       end
+
 	       define_method(name) do
 	         instance_variable_get("@#{name}")
 	       end
@@ -40,8 +40,7 @@ class Module
 	       define_method("#{name}?") do
 	         send(name) ? true : false
 	       end
-	 	 
+
      end
    end
 end
-
